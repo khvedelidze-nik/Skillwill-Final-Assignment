@@ -27,8 +27,8 @@ const PaginationBtn = ({
   return (
     <button
       onClick={() => handlePageChange(direction)}
-      className={`bg-gray-800 text-white px-4 py-2 ${
-        currPage === Number(direction) ? "text-sky-500 font-bold" : null
+      className={`bg-gray-800 px-4 py-2 ${
+        currPage === Number(direction) ? "text-sky-400 font-bold" : "text-white"
       } rounded-md ${
         (direction === "prev" && currPage <= 1) || Number(direction) < 1
           ? "hidden"

@@ -1,16 +1,16 @@
 import React from "react";
 
-interface UserProps {
+interface AuthorProps {
   name: string;
-  avatar: string;
   username: string;
+  avatar: string;
 }
 
-const CardUser: React.FC<UserProps> = ({ name, avatar, username }) => {
+const PhotoAuthor: React.FC<AuthorProps> = ({ name, username, avatar }) => {
   return (
-    <span className="flex gap-1 align-middle cursor-pointer">
+    <span className="flex gap-1 align-middle cursor-pointer mb-4 mt-4">
       <img className="w-8 h-8 rounded-full" src={avatar} alt={name} />
-      <div className="text-white flex flex-col">
+      <div className="text-gray-900 flex flex-col">
         <span className="font-bold text-sm h-4">
           {name.length > 20 ? name.slice(0, 20) + "..." : name}
         </span>
@@ -20,4 +20,4 @@ const CardUser: React.FC<UserProps> = ({ name, avatar, username }) => {
   );
 };
 
-export default CardUser;
+export default PhotoAuthor;

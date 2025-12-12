@@ -1,12 +1,19 @@
 import React from "react";
+import CardImage from "./CardImage";
+import CardStatusLoading from "./CardStatusLoading";
 
-interface BackgroundParams {
+interface BackgroundProps {
   url: string;
   description: string;
 }
 
-const CardBackground: React.FC<BackgroundParams> = ({ url, description }) => {
-  return <img className="w-full h-auto" src={url} alt={description} />;
+const CardBackground: React.FC<BackgroundProps> = ({ url, description }) => {
+  return (
+    <div className="min-h-50 bg-gray-200 relative">
+      <CardStatusLoading />
+      <CardImage url={url} description={description} />
+    </div>
+  );
 };
 
 export default CardBackground;

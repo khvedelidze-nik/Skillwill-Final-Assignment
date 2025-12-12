@@ -2,14 +2,14 @@ import type React from "react";
 import CardUser from "./CardUser";
 import CardDescription from "./CardDescription";
 
-interface ContentInterface {
+interface ContentProps {
   name: string;
   avatar: string;
   username: string;
   description: string;
 }
 
-const CardContent: React.FC<ContentInterface> = ({
+const CardContent: React.FC<ContentProps> = ({
   name,
   avatar,
   username,
