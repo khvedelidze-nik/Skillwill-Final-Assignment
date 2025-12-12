@@ -6,7 +6,7 @@ const useGetPhoto = (id: string) => {
   const result = useQuery<IPhoto>({
     queryKey: ["photo", id],
     queryFn: () => getPhoto(id),
-    staleTime: 15 * 60 * 1000,
+    staleTime: 20 * 60 * 1000,
   });
   return result;
 };

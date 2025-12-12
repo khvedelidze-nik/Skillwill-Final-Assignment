@@ -31,7 +31,6 @@ export interface IPhotoData {
   likes: number;
   liked_by_user: boolean;
   bookmarked: boolean;
-  current_user_collections: [];
   sponsorship: {
     impression_urls: [];
     tagline: string;

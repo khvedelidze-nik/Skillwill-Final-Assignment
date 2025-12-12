@@ -1,9 +1,9 @@
 import { useSearchParams } from "react-router-dom";
 import useGetNewPhotos from "../../../hooks/queries/useGetNewPhotos";
-import NewPhotosList from "./NewPhotosList";
 import PaginationWrapper from "./pagination/PaginationWrapper";
 import StatusError from "../../statuses/StatusError";
 import StatusLoading from "../../statuses/StatusLoading";
+import PhotosList from "../PhotosList";
 
 const NewPhotosWrapper = () => {
   const [searchParams] = useSearchParams();
@@ -15,7 +15,7 @@ const NewPhotosWrapper = () => {
   if (isLoading) return <StatusLoading />;
   return (
     <div className="p-4 min-h-100vh">
-      <NewPhotosList photos={photos!} />
+      <PhotosList photos={photos!} />
       <PaginationWrapper />
     </div>
   );

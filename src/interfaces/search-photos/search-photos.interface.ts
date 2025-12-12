@@ -1,7 +1,7 @@
-import type { ISearchPhotoData } from "./search-photo.interface";
+import type { IPhoto } from "../photo/photo.interface";
 
 export interface ISearchPhotos {
   total: number;
   total_pages: number;
-  results: ISearchPhotoData[];
+  results: IPhoto[];
 }

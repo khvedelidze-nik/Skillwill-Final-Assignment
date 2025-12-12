@@ -6,7 +6,7 @@ const useGetSearchPhotos = (searchTerm: string, page: number) => {
   const result = useQuery<ISearchPhotos>({
     queryKey: ["search-photo", searchTerm, page],
     queryFn: () => getSearchPhotos(searchTerm, page),
-    staleTime: 15 * 60 * 1000, // 15 წუთით ინახავს
+    staleTime: 20 * 60 * 1000, // 20 წუთით ინახავს
     refetchOnWindowFocus: false,
     refetchInterval: false,
     refetchOnReconnect: false,

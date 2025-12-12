@@ -6,7 +6,7 @@ interface DescriptionParams {
 
 const CardDescription: React.FC<DescriptionParams> = ({ description }) => {
   return (
-    <p className="text-white m-1 text-sm">
+    <p className="text-white m-1 text-sm cursor-pointer">
       {description?.length > 36
         ? description.slice(0, 36) + "..."
         : description}

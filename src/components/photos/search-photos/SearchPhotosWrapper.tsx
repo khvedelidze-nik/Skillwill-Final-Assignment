@@ -1,11 +1,11 @@
 import { useSearchParams } from "react-router-dom";
 import PaginationWrapper from "./pagination/PaginationWrapper";
-import SearchPhotosList from "./SearchPhotosList";
 import useGetSearchPhotos from "../../../hooks/queries/useGetSearchPhotos";
 import StatusLoading from "../../statuses/StatusLoading";
 import StatusNoResults from "../../statuses/StatusNoResults";
 import StatusError from "../../statuses/StatusError";
 import type React from "react";
+import PhotosList from "../PhotosList";
 
 const SearchPhotosWrapper: React.FC = () => {
   const [searchParams] = useSearchParams();
@@ -23,7 +23,7 @@ const SearchPhotosWrapper: React.FC = () => {
   if (results!.results.length < 1) return <StatusNoResults />;
   return (
     <div className="p-4 min-h-100vh">
-      <SearchPhotosList results={results!.results} />
+      <PhotosList photos={results!.results} />
       <PaginationWrapper totalPages={results!.total_pages} />
     </div>
   );
