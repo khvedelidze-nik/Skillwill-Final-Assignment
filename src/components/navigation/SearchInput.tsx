@@ -19,9 +19,9 @@ const SearchInput: React.FC = () => {
 
   useEffect(() => {
     async function checkPath(path: string) {
-      if (path === "/") {
+      if (path !== "/photos/search") {
         setValue("");
-        navigate("/");
+        navigate(path);
       }
     }
     checkPath(location.pathname);
