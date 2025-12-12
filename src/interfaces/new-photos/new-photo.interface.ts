@@ -1,4 +1,4 @@
-export interface IPictureData {
+export interface IPhotoData {
   id: string;
   slug: string;
   alternative_slugs: {
@@ -6,12 +6,12 @@ export interface IPictureData {
   };
   created_at: string;
   updated_at: string;
-  promoted_at: null;
+  promoted_at: string;
   width: number;
   height: number;
   color: string;
   blur_hash: string;
-  description: string | null;
+  description: string;
   alt_description: string;
   breadcrumbs: [];
   urls: {
@@ -46,7 +46,7 @@ export interface IPictureData {
       twitter_username: string;
       portfolio_url: string;
       bio: string;
-      location: null;
+      location: string;
       links: {
         self: string;
         html: string;

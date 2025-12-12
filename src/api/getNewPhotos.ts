@@ -1,6 +1,6 @@
 import $api from "../http";
 
-const getPhotos = async (page?: number) => {
+export default async function getNewPhotos(page: number) {
   try {
     const response = await $api.get("/photos", {
       params: { page: page || 1, per_page: 20 },
@@ -10,5 +10,4 @@ const getPhotos = async (page?: number) => {
     console.error("Error fetching photos:", error);
     throw error;
   }
-};
-export default getPhotos;
+}

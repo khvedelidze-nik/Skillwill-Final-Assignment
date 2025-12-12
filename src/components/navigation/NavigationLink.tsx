@@ -1,12 +1,12 @@
+import type React from "react";
 import { NavLink } from "react-router-dom";
 
-const NavigationLink = ({
-  to,
-  children,
-}: {
+interface LinkInterface {
   to: string;
   children: React.ReactNode;
-}) => {
+}
+
+const NavigationLink: React.FC<LinkInterface> = ({ to, children }) => {
   return (
     <NavLink
       to={to}
