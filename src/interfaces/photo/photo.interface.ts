@@ -4,11 +4,11 @@ export interface IPhoto {
   id: string;
   created_at: string;
   updated_at: string;
-  width: 2448;
-  height: 3264;
+  width: number;
+  height: number;
   color: string;
   blur_hash: string;
-  downloads: 1345;
+  downloads: number;
   public_domain: false;
   description: string;
   exif: {
@@ -18,27 +18,27 @@ export interface IPhoto {
     exposure_time: string;
     aperture: string;
     focal_length: string;
-    iso: 100;
+    iso: number;
   };
   location: {
     city: string;
     country: string;
     position: {
-      latitude: 45.473298;
-      longitude: -73.638488;
+      latitude: number;
+      longitude: number;
     };
   };
   tags: [{ title: string }];
   current_user_collections: [
     {
-      id: 206;
+      id: number;
       title: string;
       published_at: string;
       last_collected_at: string;
       updated_at: string;
       cover_photo: null;
       user: null;
-    }
+    },
   ];
   urls: {
     raw: string;

@@ -15,7 +15,7 @@ const PhotoBackground: React.FC<BackgroundProps> = ({
   // download_url,
 }) => {
   return (
-    <div className="min-h-50 bg-gray-900 relative flex justify-center">
+    <div className="min-h-50 bg-gray-950 relative flex justify-center">
       <PhotoStatusLoading />
       <PhotoImage url={url} description={description} />
       {/* <DownloadButton url={download_url} /> // ეს გავაუქმე, რადგან არ იწერდა ფოტოს */}

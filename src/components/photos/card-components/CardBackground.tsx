@@ -9,7 +9,7 @@ interface BackgroundProps {
 
 const CardBackground: React.FC<BackgroundProps> = ({ url, description }) => {
   return (
-    <div className="min-h-50 bg-gray-200 relative">
+    <div className={`min-h-50 bg-gray-950 relative`}>
       <CardStatusLoading />
       <CardImage url={url} description={description} />
     </div>
